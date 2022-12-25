@@ -1,0 +1,7 @@
+ref : https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+
+site : http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+
+Getting a Bearer Token : kubectl -n kubernetes-dashboard create token admin-user
+
+Don't forget : kubectl proxy
