@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydjango-deploy
+spec:
+  # strategy:
+  #   rollingUpdate:
+  #     maxSurge: 25%
+  #     maxUnavailable: 25%
+  #   type: RollingUpdate
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mydjango-deploy
+  template:
+    metadata:
+      labels:
+        app: mydjango-deploy
+    spec:
+      containers:
+      - name: myapp
+        image: 2e16jun/mydjango:0.3
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8000

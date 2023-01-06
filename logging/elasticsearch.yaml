@@ -45,4 +45,4 @@ spec:
     targetPort: 9300
   selector:
     app: elasticsearch
-  type: NodePort
+  type: LoadBalancer

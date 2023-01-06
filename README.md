@@ -5,7 +5,7 @@
 ## dashboard
 - Kubernetes Dashboard
 ## Jenkins
-- 젠킨스 설치
+- 젠킨스 설치 및 아래 예시처럼 활용
 <img src="./CI_CD_flow_image.png" title=""/>
 
 ## kustomize
