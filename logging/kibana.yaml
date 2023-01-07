@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: kibana
+        lbtype: external
     spec:
       containers:
       - name: kibana
@@ -39,5 +40,5 @@ spec:
     protocol: TCP
     targetPort: 5601
   selector:
-    app: LoadBalancer
+    app: kibana
   type: LoadBalancer

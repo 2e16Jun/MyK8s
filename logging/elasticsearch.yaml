@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: elasticsearch
+        lbtype: external
     spec:
       containers:
       - name: elasticsearch

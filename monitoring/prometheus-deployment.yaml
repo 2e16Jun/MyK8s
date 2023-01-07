@@ -48,4 +48,4 @@ spec:
     targetPort: 9090
   selector:
     app: prometheus-app
-  type: NodePort
+  type: LoadBalancer
