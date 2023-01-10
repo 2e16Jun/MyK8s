@@ -23,6 +23,13 @@ spec:
         volumeMounts:
           - name: jenkins-vol
             mountPath: /var/jenkins_vol
+        resources:
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+            
       volumes:
         - name: jenkins-vol
-          emptyDir: {}
+          persistentVolumeClaim:
+            claimName: azure-managed-disk
+          # emptyDir: {}
