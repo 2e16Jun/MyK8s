@@ -16,10 +16,12 @@ spec:
     metadata:
       labels:
         app: mydjango-deploy
+      annotations:
+        kubernetes.io/change-cause: version 0.4
     spec:
       containers:
       - name: myapp
-        image: 2e16jun/mydjango:0.3
+        image: 2e16jun/mydjango:0.4
         resources:
           limits:
             memory: "128Mi"
